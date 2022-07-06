@@ -1,0 +1,157 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color:  aliceblue;
+ 	
+
+}
+
+
+
+.container{
+	padding: 100px;
+	
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.9) 0px 19px 38px, rgba(250, 180, 160, 0.22) 0px 25px 22px;
+
+}
+
+.container #screen {
+	width: 97%;
+	height: 83px;
+	text-align: right;
+	border: 2px solid darkgoldenrod;
+	border-radius: 7px;
+	font-size: 35px;
+	box-shadow: 2px 2px 6px firebrick;
+}
+
+
+.container .btns{
+	width: 100%;
+	margin-top: 1.7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.container .btns .row button {
+  /*position: absolute;*/
+ /* top: 50%;
+  left: 50%;*/
+  
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+  outline: none;
+  color: darkred;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+
+  background: linear-gradient(80deg, orange, peachpuff, deeppink, skyblue, lightgreen , yellow);
+
+  border-radius: 4px;
+  z-index: 1;
+}
+button:hover {
+  animation: animate 8s linear infinite;
+
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+button:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(45deg, orange, lavender, greenyellow);
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0.01;
+  transition: 2%;
+}
+button:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 4s alternate infinite;
+}
+
+
+/*#eval{
+    background-color: rgb(7, 220, 248);
+}
+#eval:hover{
+    background-color: rgb(43, 173, 190);
+}
+#ac{
+    background-color: rgb(77, 255, 7);
+}
+#ac:hover{
+    background-color: rgb(85, 177, 48);
+}
+#ce{
+    background-color: rgb(243, 6, 251);
+}
+#ce:hover{
+    background-color: rgb(160, 20, 165);
+}
+*/
+@media screen and (max-width: 580px) {
+    .container .btns .row button{
+        width: 45px;
+    }
+    .container #screen{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container .btns .row button{
+        width: 33px;
+    }
+    .container{
+        width: 85%;
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 360px) {
+    .container .btns .row button{
+       width: 28px;
+   }
+   .container #screen{
+       font-size: 24px;
+   }
+}
+@media screen and (max-width: 320px) {
+    .container .btns .row button{
+       width: 21px;
+       font-size: 14px;
+   }
+   .container #screen{
+       font-size: 20px;
+   }
+   .container{
+       height: 57vh;
+   }
+}
